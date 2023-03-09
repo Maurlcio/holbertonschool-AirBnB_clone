@@ -11,7 +11,7 @@ from models.review import Review
 
 
 class FileStorage:
-    """class that serializes instances to JSON file 
+    """class that serializes instances to JSON file
     and deserializes JSON file to instance
     __file_path = name of the file to save objects to
     __objects = dictionary of instantiated objects"""
@@ -35,7 +35,7 @@ class FileStorage:
             json.dump(objdict, f)
 
     def reload(self):
-        """deserializes JSON file __file_path to __objects, 
+        """deserializes JSON file __file_path to __objects,
         but only if it exists"""
         try:
             with open(FileStorage.__file_path) as f:

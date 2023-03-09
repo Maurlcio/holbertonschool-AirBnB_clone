@@ -27,8 +27,8 @@ class TestFileStorage(unittest.TestCase):
         bm = BaseModel()
         self.fs.new(bm)
         self.fs.save()
-        with open(FileStorage._FileStorage__file_path, "r") as f:
-            file_content = f.read()
+        with open(FileStorage._FileStorage__file_path, "r") as file:
+            file_content = file.read()
         self.assertIn(type(bm).__name__, file_content)
         self.assertIn(bm.id, file_content)
 
